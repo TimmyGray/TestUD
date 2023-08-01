@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --main-color-blue: #035FCC;
+  --main-color-black: #171725;
+  --main-color-midblue: #92bdf0;
+  --main-color-hover-opt: #EDF3FB;
+  --main-color-border: #EDF3FB;
+  --main-color-white: #FFFFFF;
+  --main-color-shadows: rgba(46, 45, 116, 0.10);
+  --main-color-grey: #B9BCC0;
+  --maim-color-text: #737373;
+  --main-color-green: #34B53A;
+  --main-font-family: Raleway;
+  --main-font-numeric: lining-nums proportional-nums;
+  --main-font-feature: 'cv11' on, 'cv01' on, 'ss01' on;
+}
+
+
+.common-text {
+  font-variant-numeric: var(--main-font-numeric);
+  font-feature-settings: var(--main-font-feature);
+  font-family: var(--main-font-family);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.ag-14 {
+  font-size: 14px;
+}
+
+.ag-16 {
+  font-size: 16px;
+}
+
+.main-text{
+
+    color:var(--maim-color-text);
+}
+
+.text-container{
+
+    display:flex;
+    flex:1 0 0;
+    align-self:stretch;
+    text-align:center;
+    justify-content:center;
+
+}
+
+

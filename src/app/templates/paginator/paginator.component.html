@@ -1,0 +1,46 @@
+
+<div class="nav-pagebar">
+  <div class="nav-digit" (click)="clickPage(currentPage-1)" name="leftarrow">
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="Icons">
+        <path id="Arrow 1 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M10.5008 16.7319L7.50078 14.9999L10.5008 13.2678V14.6999L27.5008 14.6999C27.6665 14.6999 27.8008 14.8342 27.8008 14.9999C27.8008 15.1656 27.6665 15.2999 27.5008 15.2999L10.5008 15.2999V16.7319Z" fill="#171725" />
+      </g>
+    </svg>
+  </div>
+
+  <ng-container *ngIf="numberOfPages.length<=5" >
+    <div class="nav-digit" (click)="clickPage(i)" *ngFor="let page of numberOfPages;let i=index" >
+      <span class="text-container common-text ag-14">{{i+1}}</span>
+    </div>
+  </ng-container>
+
+  <ng-container  *ngIf="currentPage>=5">
+
+    <div class="nav-digit" [class.nav-digit-active]="numberOfPages[i+5]" (click)="clickPage(i+5)" *ngFor="let page of numberOfPages | slice:5:10;let i=index">
+      <span class="text-container common-text ag-14">{{i+6}}</span>
+    </div>
+
+  </ng-container>
+
+  <ng-container *ngIf="currentPage<5">
+    <div class="nav-digit" [class.nav-digit-active]="numberOfPages[i]" (click)="clickPage(i)" *ngFor="let page of numberOfPages | slice:0:5;let i=index">
+      <span class="text-container common-text ag-14">{{i+1}}</span>
+    </div>
+    <div class="nav-digit" (click)="clickPage(5)">
+      <span class="text-container common-text ag-14">...</span>
+    </div>
+    <div class="nav-digit" [class.nav-digit-active]=numberOfPages[numberOfPages.length-1] (click)="clickPage(numberOfPages.length-1)">
+      <span class="text-container common-text ag-14">{{numberOfPages.length}}</span>
+    </div>
+
+  </ng-container>
+
+  <div class="nav-digit" (click)="clickPage(currentPage+1)" name="rightarrow">
+    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g id="Icons">
+        <path id="Arrow 1 (Stroke)" fill-rule="evenodd" clip-rule="evenodd" d="M19.4992 13.2681L22.4992 15.0001L19.4992 16.7322V15.3001L2.49922 15.3001C2.33353 15.3001 2.19922 15.1658 2.19922 15.0001C2.19922 14.8344 2.33353 14.7001 2.49922 14.7001L19.4992 14.7001V13.2681Z" fill="#171725" />
+      </g>
+    </svg>
+  </div>
+
+</div>

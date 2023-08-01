@@ -1,0 +1,47 @@
+@import '../../../styles.css';
+
+:root{
+
+    --paginator-color-arrows:var(--main-color-black);
+}
+
+.nav-digit {
+  display: flex;
+  width: 45px;
+  padding: 8px;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-shrink: 0;
+  color: var(--main-color-black);
+}
+
+  .nav-digit:hover {
+    cursor: pointer;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--main-color-midblue);
+  }
+
+.nav-digit-active {
+  background-color: var(--main-color-blue);
+  width: 55px;
+  border-radius: 8px;
+  color: var(--main-color-white);
+}
+
+
+.nav-pagebar {
+  display: inline-flex;
+  height: 36px;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.arrow{
+
+    fill:var(--paginator-color-arrows);
+
+}
